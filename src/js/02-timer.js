@@ -31,6 +31,7 @@ const options = {
       //     'Please choose a date in the future',        // Instead of first Notify.failure
       //     'Close'
       //   );
+      btnRef.disabled = true;
       chooseDate = null;
     }
   },
@@ -43,7 +44,7 @@ function onStartClick() {
   chooseDate = new Date(inputRef.value);
 
   const id = setInterval(() => {
-    if (chooseDate - Date.now() > 0) {
+    if (chooseDate - Date.now() >= 0) {
       convertMs(chooseDate - Date.now());
     } else {
       clearInterval(id);

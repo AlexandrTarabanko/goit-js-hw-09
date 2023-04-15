@@ -8,14 +8,18 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+stopBtnRef.disabled = true;
+
 const onStartClick = e => {
   startBtnRef.disabled = true;
+  stopBtnRef.disabled = false;
   const id = setInterval(() => {
     bodyRef.style.backgroundColor = getRandomHexColor();
   }, 1000);
 
   const onStopClick = () => {
     startBtnRef.disabled = false;
+    stopBtnRef.disabled = true;
     clearInterval(id);
     stopBtnRef.removeEventListener('click', onStopClick);
   };
