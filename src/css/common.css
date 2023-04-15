@@ -16,3 +16,27 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  font-size: 26px;
+}
+
+.field{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input#datetime-picker{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
