@@ -8,7 +8,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-stopBtnRef.disabled = true;
+stopBtnRef.setAttribute('disabled', true);
 
 const onStartClick = e => {
   startBtnRef.disabled = true;
